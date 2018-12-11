@@ -55,7 +55,7 @@ create table movie
 (
   movieID       INTEGER primary key AUTO_INCREMENT,
   title         VARCHAR(80) not null,
-  summary       VARCHAR(1000) not null,
+  summary       VARCHAR(5000) not null,
   year          INTEGER(4) not null,
   contentRating VARCHAR(10) not null,
   rating        FLOAT not null,

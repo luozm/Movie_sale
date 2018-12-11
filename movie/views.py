@@ -3,6 +3,7 @@ import requests
 from PIL import Image
 from copy import copy
 import sqlite3
+import random
 from mysql import connector
 from werkzeug.urls import url_parse
 from flask import render_template, redirect, url_for, flash, request, session, jsonify
@@ -332,6 +333,7 @@ def manage_add_movie():
             im = Image.open(img_filename)
             im = im.resize((600, 900), Image.ANTIALIAS)
             im.save(img_filename, "JPEG")
+            flash("Please refresh your browser by 'Shift+F5' after changing the poster.")
 
     if request.form.get('add') == '' and not form.validate():
         flash("Please fill in required fields.")
